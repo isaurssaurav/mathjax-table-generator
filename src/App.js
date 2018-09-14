@@ -77,6 +77,14 @@ class App extends Component {
   render() {
     return (
       <div>
+        <a
+          class="github-fork-ribbon"
+          href="https://github.com/isaurssaurav/mathjax-table-generator"
+          data-ribbon="Fork me on GitHub"
+          title="Fork me on GitHub"
+        >
+          Fork me on GitHub
+        </a>
         <main role="main" class="container">
           <h1 className="mt-5">Math Jax table generator</h1>
           {/* <p className="lead">Uses array of MATHJAX </p> */}
