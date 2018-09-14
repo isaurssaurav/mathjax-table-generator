@@ -138,7 +138,11 @@ class App extends Component {
         </div>
         <div className="container">
           <hr />
-          <textarea value={this.state.codeValue} />
+          <textarea
+            rows="10"
+            className="form-control"
+            value={this.state.codeValue}
+          />
         </div>
       </div>
     );
