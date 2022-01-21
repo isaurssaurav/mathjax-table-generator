@@ -56,7 +56,7 @@ class App extends Component {
     this.setState({ arr: array2D });
   };
   generateCode = () => {
-    let code = `\\begin{array} {${'|c'.repeat(this.state.noColoums) + '|'}}\\hline `;
+    let code = `\\begin{array} {${'|c'.repeat(this.state.noRows) + '|'}}\\hline `;
 
     for (var i = 0; i < parseInt(this.state.noColoums); i++) {
       code += ``;
