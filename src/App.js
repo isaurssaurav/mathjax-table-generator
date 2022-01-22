@@ -49,10 +49,29 @@ class App extends Component {
         array2D[i][j] = {
           postionI: i,
           postionJ: j,
-          value: i + "_" + j
+          value: " "
         };
       }
     }
+
+    if(this.state.arr){
+      for(var i = 0; i < this.state.arr.length; i ++){
+        var row = this.state.arr[i]
+
+        for(var j = 0; j < row.length; j ++){
+          if(i < this.state.noColoums  && j < this.state.noRows){
+            array2D[i][j] = {
+              postionI: i,
+              postionJ: j,
+              value: this.state.arr[i][j].value
+            };
+          }
+        }
+
+
+      }
+    }
+
     this.setState({ arr: array2D });
   };
   generateCode = () => {
@@ -138,7 +157,7 @@ class App extends Component {
         </div>
         <div className="container">
           <hr />
-          <textarea value={this.state.codeValue} />
+          <textarea value={this.state.codeValue} class = "form-control"/>
         </div>
       </div>
     );
